@@ -1,2 +1,4 @@
-# city-of-faith-info
-Repository for City of Faith related pages.
+# City of Faith
+Information about the game 'City of Faith'.
+
+##[Privacy Policy] (https://beetjuicer.github.io/city-of-faith-info/privacypolicy)
