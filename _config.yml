@@ -1,7 +1,7 @@
 # _config.yml
 title: "City of Faith"
 description: "Modernizing Bible Engagement among the Youth through Gamification"
-baseurl: "/https://beetjuicer.github.io/city-of-faith-info/" # Change to "/your-repo-name" if not using username.github.io
+baseurl: "/city-of-faith-info" # Change to "/your-repo-name" if not using username.github.io
 url: "https://beetjuicer.github.io" # Change to your actual GitHub Pages URL
 
 # Build settings
