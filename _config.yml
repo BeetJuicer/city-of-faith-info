@@ -1,0 +1,24 @@
+# _config.yml
+title: "City of Faith"
+description: "Modernizing Bible Engagement among the Youth through Gamification"
+baseurl: "/https://beetjuicer.github.io/city-of-faith-info/" # Change to "/your-repo-name" if not using username.github.io
+url: "https://beetjuicer.github.io" # Change to your actual GitHub Pages URL
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+plugins:
+  - jekyll-feed
+
+# Exclude files
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/
+
+# Site settings
+author: "BeetJuicer"
+github_repo: "city-of-faith-info"
+github_username: "BeetJuicer"
