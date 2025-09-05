@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>City of Faith - Modernizing Bible Engagement</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #2d3748;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 60px;
+            padding: 40px 0;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            border-radius: 24px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .title {
+            font-size: 3.5rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #ffd700, #ffb347);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 15px;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .subtitle {
+            font-size: 1.3rem;
+            color: rgba(255, 255, 255, 0.9);
+            font-weight: 300;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .main-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+
+        .section {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .section:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+        }
+
+        .section-title {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #4c51bf;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+        }
+
+        .features-grid {
+            grid-column: 1 / -1;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            animation: fadeInUp 1s ease-out 0.3s both;
+        }
+
+        .features-title {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #4c51bf;
+            margin-bottom: 40px;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .feature {
+            background: linear-gradient(135deg, #f7fafc, #edf2f7);
+            padding: 30px;
+            border-radius: 16px;
+            text-align: center;
+            border: 2px solid rgba(102, 126, 234, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .feature:hover {
+            transform: scale(1.05);
+            border-color: #667eea;
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.15);
+        }
+
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            margin: 0 auto 20px;
+        }
+
+        .feature h3 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: #4c51bf;
+            margin-bottom: 15px;
+        }
+
+        .privacy-section {
+            grid-column: 1 / -1;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            text-align: center;
+            animation: fadeInUp 1s ease-out 0.6s both;
+        }
+
+        .privacy-link {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            text-decoration: none;
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);
+        }
+
+        .privacy-link:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 35px rgba(102, 126, 234, 0.4);
+            background: linear-gradient(135deg, #764ba2, #667eea);
+        }
+
+        .highlight {
+            background: linear-gradient(135deg, #ffd700, #ffb347);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 700;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .title {
+                font-size: 2.5rem;
+            }
+            
+            .main-content {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            
+            .section, .features-grid, .privacy-section {
+                padding: 30px 25px;
+            }
+            
+            .features {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .floating-elements {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            overflow: hidden;
+        }
+
+        .floating-element {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            animation: float 20s infinite linear;
+        }
+
+        .floating-element:nth-child(1) {
+            width: 80px;
+            height: 80px;
+            left: 10%;
+            animation-delay: 0s;
+        }
+
+        .floating-element:nth-child(2) {
+            width: 120px;
+            height: 120px;
+            left: 80%;
+            animation-delay: -5s;
+        }
+
+        .floating-element:nth-child(3) {
+            width: 60px;
+            height: 60px;
+            left: 60%;
+            animation-delay: -10s;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(100vh) rotate(0deg);
+                opacity: 0;
+            }
+            10%, 90% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100px) rotate(360deg);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="floating-elements">
+        <div class="floating-element"></div>
+        <div class="floating-element"></div>
+        <div class="floating-element"></div>
+    </div>
+
+    <div class="container">
+        <div class="header">
+            <h1 class="title">City of Faith</h1>
+            <p class="subtitle">Modernizing Bible Engagement among the Youth through Gamification</p>
+        </div>
+
+        <div class="main-content">
+            <div class="section">
+                <h2 class="section-title">
+                    <div class="icon">🎮</div>
+                    The Challenge
+                </h2>
+                <p>In today's digital age, youth are more engaged with mobile games than with traditional religious practices. Conventional methods like sermons or Bible studies often fail to capture their interest, creating a significant gap in spiritual growth and Bible engagement among young believers.</p>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">
+                    <div class="icon">💡</div>
+                    Our Solution
+                </h2>
+                <p>City of Faith bridges this gap by using <span class="highlight">gamification to encourage daily Bible reading and reflection</span>. By integrating biblical content into an engaging city-building experience with interactive features, we transform spiritual practices into captivating digital experiences.</p>
+            </div>
+
+            <div class="features-grid">
+                <h2 class="features-title">Game Features</h2>
+                <div class="features">
+                    <div class="feature">
+                        <div class="feature-icon">🏙️</div>
+                        <h3>City Building</h3>
+                        <p>Build and expand your own biblical city while learning about faith and community through engaging gameplay mechanics.</p>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon">🌾</div>
+                        <h3>Faith-Based Farming</h3>
+                        <p>Cultivate crops and tend to your land while reflecting on biblical principles of stewardship and growth.</p>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon">👥</div>
+                        <h3>Biblical NPCs</h3>
+                        <p>Interact with characters from the Bible through engaging quizzes and conversations that bring scripture to life.</p>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon">📚</div>
+                        <h3>Bible Quizzes</h3>
+                        <p>Test your knowledge and deepen your understanding with interactive quizzes based on biblical stories and teachings.</p>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon">🎯</div>
+                        <h3>Parable Minigames</h3>
+                        <p>Experience Jesus's parables through interactive minigames that make timeless lessons memorable and fun.</p>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon">📖</div>
+                        <h3>Daily Devotionals</h3>
+                        <p>Engage with daily reflections and devotional content seamlessly integrated into your gaming experience.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">
+                    <div class="icon">🧠</div>
+                    Theoretical Foundation
+                </h2>
+                <p>Grounded in <strong>Digital Spirituality</strong>, <strong>Self-Determination Theory</strong>, and <strong>Moral Foundations Theory</strong>, City of Faith motivates users through autonomy, reward systems, and ethical storytelling. The game aims to reconnect youth with their faith by aligning spiritual growth with the digital habits they already enjoy.</p>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">
+                    <div class="icon">🎯</div>
+                    Our Mission
+                </h2>
+                <p>To transform how young people engage with their faith by creating an innovative platform that makes Bible study interactive, enjoyable, and relevant to their digital lifestyle. We believe that <span class="highlight">faith and technology can work together</span> to create meaningful spiritual experiences.</p>
+            </div>
+
+            <div class="privacy-section">
+                <h2 class="section-title">
+                    <div class="icon">🔒</div>
+                    Your Privacy Matters
+                </h2>
+                <p style="margin-bottom: 25px;">We are committed to protecting your personal information and creating a safe gaming environment for all players.</p>
+                <a href="https://beetjuicer.github.io/city-of-faith-info/privacypolicy" class="privacy-link">View Privacy Policy</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
