@@ -376,3 +376,488 @@ body {
         opacity: 0;
     }
 }
+
+/* Privacy Policy Styles */
+.privacy-policy-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    animation: fadeInUp 1s ease-out;
+}
+
+.privacy-content {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    border-radius: 24px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 50px;
+    margin-bottom: 30px;
+}
+
+.privacy-content h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, #14213D, #1e3a5f);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-align: center;
+    margin-bottom: 30px;
+    animation: fadeInUp 1s ease-out 0.2s both;
+}
+
+.intro-text {
+    font-size: 1.1rem;
+    color: #4a5568;
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 50px;
+    padding: 25px;
+    background: linear-gradient(135deg, #ffffff, #f8fdff);
+    border-radius: 16px;
+    border: 2px solid rgba(0, 206, 200, 0.1);
+    animation: fadeInUp 1s ease-out 0.3s both;
+}
+
+.policy-section {
+    margin-bottom: 40px;
+    animation: fadeInUp 1s ease-out 0.4s both;
+}
+
+.policy-section:nth-child(even) {
+    animation-delay: 0.5s;
+}
+
+.policy-section h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #14213D;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid;
+    border-image: linear-gradient(135deg, #00CEC8, #009b96) 1;
+    position: relative;
+}
+
+.policy-section h2::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(135deg, #00CEC8, #009b96);
+    border-radius: 2px;
+}
+
+.policy-section p {
+    margin-bottom: 15px;
+    color: #4a5568;
+    line-height: 1.8;
+}
+
+.policy-section ul {
+    margin: 20px 0;
+    padding-left: 0;
+    list-style: none;
+}
+
+.policy-section li {
+    position: relative;
+    margin-bottom: 12px;
+    padding-left: 30px;
+    color: #4a5568;
+    line-height: 1.7;
+}
+
+.policy-section li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 10px;
+    width: 8px;
+    height: 8px;
+    background: linear-gradient(135deg, #00CEC8, #009b96);
+    border-radius: 50%;
+}
+
+.policy-section a {
+    color: #00CEC8;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.policy-section a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(135deg, #00CEC8, #009b96);
+    transition: width 0.3s ease;
+}
+
+.policy-section a:hover {
+    color: #009b96;
+}
+
+.policy-section a:hover::after {
+    width: 100%;
+}
+
+.policy-section strong {
+    color: #14213D;
+    font-weight: 700;
+}
+
+.policy-footer {
+    margin-top: 50px;
+    padding-top: 30px;
+    border-top: 2px solid rgba(0, 206, 200, 0.2);
+    text-align: center;
+}
+
+.policy-footer hr {
+    display: none;
+}
+
+.generator-note {
+    color: #718096;
+    font-size: 0.9rem;
+    font-style: italic;
+}
+
+.generator-note a {
+    color: #00CEC8;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.generator-note a:hover {
+    color: #009b96;
+}
+
+.policy-section:hover {
+    transform: translateY(-2px);
+    transition: transform 0.3s ease;
+}
+
+.policy-section:last-of-type {
+    background: linear-gradient(135deg, #ffffff, #f8fdff);
+    padding: 30px;
+    border-radius: 16px;
+    border: 2px solid rgba(0, 206, 200, 0.1);
+    text-align: center;
+}
+
+/* Privacy Policy Mobile Responsiveness */
+@media (max-width: 768px) {
+    .privacy-policy-container {
+        padding: 15px;
+    }
+
+    .privacy-content {
+        padding: 30px 25px;
+        border-radius: 20px;
+    }
+
+    .privacy-content h1 {
+        font-size: 2.2rem;
+    }
+
+    .policy-section h2 {
+        font-size: 1.5rem;
+    }
+
+    .intro-text {
+        font-size: 1rem;
+        padding: 20px;
+    }
+
+    .policy-section li {
+        padding-left: 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    .privacy-content h1 {
+        font-size: 1.8rem;
+    }
+
+    .policy-section h2 {
+        font-size: 1.3rem;
+    }
+
+    .privacy-content {
+        padding: 20px;
+    }
+}
+
+
+/* Data Deletion Styles */
+.data-deletion-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    animation: fadeInUp 1s ease-out;
+}
+
+.data-deletion-content {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    border-radius: 24px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 50px;
+    margin-bottom: 30px;
+}
+
+.data-deletion-content h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, #14213D, #1e3a5f);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-align: center;
+    margin-bottom: 30px;
+    animation: fadeInUp 1s ease-out 0.2s both;
+}
+
+.deletion-intro {
+    font-size: 1.2rem;
+    color: #4a5568;
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 50px;
+    padding: 25px;
+    background: linear-gradient(135deg, #ffffff, #f8fdff);
+    border-radius: 16px;
+    border: 2px solid rgba(0, 206, 200, 0.1);
+    animation: fadeInUp 1s ease-out 0.3s both;
+}
+
+.deletion-option {
+    margin-bottom: 35px;
+    padding: 35px;
+    background: linear-gradient(135deg, #ffffff, #f8fdff);
+    border-radius: 20px;
+    border: 2px solid rgba(0, 206, 200, 0.1);
+    transition: all 0.3s ease;
+    animation: fadeInUp 1s ease-out 0.4s both;
+    position: relative;
+    overflow: hidden;
+}
+
+.deletion-option:nth-child(2) {
+    animation-delay: 0.5s;
+}
+
+.deletion-option:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+.deletion-option::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, #00CEC8, #009b96);
+    transition: left 0.3s ease;
+}
+
+.deletion-option:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 206, 200, 0.15);
+    border-color: rgba(0, 206, 200, 0.3);
+}
+
+.deletion-option:hover::before {
+    left: 0;
+}
+
+.deletion-option h2 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #14213D;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.deletion-icon {
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, #00CEC8, #009b96);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+
+.deletion-option p {
+    color: #4a5568;
+    line-height: 1.8;
+    font-size: 1.1rem;
+}
+
+.deletion-steps {
+    margin-top: 20px;
+    padding: 20px;
+    background: rgba(0, 206, 200, 0.05);
+    border-radius: 12px;
+    border-left: 4px solid #00CEC8;
+}
+
+.deletion-steps ol {
+    margin: 0;
+    padding-left: 20px;
+    color: #4a5568;
+}
+
+.deletion-steps li {
+    margin-bottom: 8px;
+    line-height: 1.6;
+}
+
+.deletion-steps li strong {
+    color: #14213D;
+    font-weight: 600;
+}
+
+.contact-highlight {
+    background: linear-gradient(135deg, #14213D, #1e3a5f);
+    color: white;
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.contact-highlight h2 {
+    color: white;
+    margin-bottom: 20px;
+}
+
+.contact-highlight p {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.1rem;
+    margin-bottom: 25px;
+}
+
+.contact-email {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    color: white;
+    text-decoration: none;
+    padding: 15px 30px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.contact-email:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    border-color: rgba(255, 255, 255, 0.4);
+}
+
+.important-note {
+    background: linear-gradient(135deg, #fff3cd, #ffeaa7);
+    border: 2px solid #f39c12;
+    border-radius: 16px;
+    padding: 25px;
+    margin-top: 40px;
+    text-align: center;
+}
+
+.important-note h3 {
+    color: #d68910;
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.important-note p {
+    color: #856404;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Data Deletion Mobile Responsiveness */
+@media (max-width: 768px) {
+    .data-deletion-container {
+        padding: 15px;
+    }
+
+    .data-deletion-content {
+        padding: 30px 25px;
+        border-radius: 20px;
+    }
+
+    .data-deletion-content h1 {
+        font-size: 2.2rem;
+    }
+
+    .deletion-intro {
+        font-size: 1.1rem;
+        padding: 20px;
+    }
+
+    .deletion-option {
+        padding: 25px 20px;
+    }
+
+    .deletion-option h2 {
+        font-size: 1.4rem;
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .contact-highlight {
+        padding: 30px 20px;
+    }
+
+    .deletion-steps {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .data-deletion-content h1 {
+        font-size: 1.8rem;
+    }
+
+    .deletion-option h2 {
+        font-size: 1.2rem;
+    }
+
+    .data-deletion-content {
+        padding: 20px;
+    }
+
+    .contact-email {
+        padding: 12px 24px;
+        font-size: 1rem;
+    }
+}
