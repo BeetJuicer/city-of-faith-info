@@ -118,3 +118,20 @@ custom_js: ["download.js"]
         </div>
     </div>
 </div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Handle #download hash when landing on home page
+    if (window.location.hash === '#download') {
+        setTimeout(() => {
+            const downloadSection = document.querySelector('#download');
+            if (downloadSection) {
+                downloadSection.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        }, 300); // Delay to ensure page elements are loaded
+    }
+});
+</script>

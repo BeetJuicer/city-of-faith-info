@@ -6,11 +6,11 @@
         </a>
         
         <ul class="navbar-nav" id="navbarNav">
-            <li><a href="{{ '/' | relative_url }}" class="nav-link {% if page.url == '/' %}active{% endif %}">Home</a></li>
-            <li><a href="{{ '/about' | relative_url }}" class="nav-link {% if page.url == '/about/' %}active{% endif %}">About</a></li>
-            <li><a href="{{ '/privacy-policy' | relative_url }}" class="nav-link {% if page.url == '/privacy-policy/' %}active{% endif %}">Privacy</a></li>
-            <li><a href="{{ '/data-deletion' | relative_url }}" class="nav-link {% if page.url == '/data-deletion/' %}active{% endif %}">Data Deletion</a></li>
-            <li><a href="#download" class="download-nav-btn">📲 Download</a></li>
+            <li><a href="{{ '/' | relative_url }}" class="nav-link" data-page="home">Home</a></li>
+            <li><a href="{{ '/about' | relative_url }}" class="nav-link" data-page="about">About</a></li>
+            <li><a href="{{ '/privacy-policy' | relative_url }}" class="nav-link" data-page="privacy">Privacy</a></li>
+            <li><a href="{{ '/data-deletion' | relative_url }}" class="nav-link" data-page="data-deletion">Data Deletion</a></li>
+            <li><a href="{{ '/' | relative_url }}#download" class="download-nav-btn">📲 Download</a></li>
         </ul>
         
         <button class="mobile-menu-toggle" id="mobileMenuToggle">☰</button>
