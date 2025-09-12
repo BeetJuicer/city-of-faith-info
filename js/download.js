@@ -60,3 +60,27 @@
             }, 3000); // Give some time for the download to start
         }
     });
+
+    // Function to update the version display with the latest release tag
+async function updateVersionDisplay() {
+    const username = 'BeetJuicer';
+    const repo = 'city-of-faith-info';
+    const versionSpan = document.querySelector('.download-detail span');
+    
+    try {
+        const apiUrl = `https://api.github.com/repos/${username}/${repo}/releases/latest`;
+        const response = await fetch(apiUrl);
+        
+        if (response.ok) {
+            const data = await response.json();
+            // Update the span text with the tag name
+            versionSpan.textContent = `Version ${data.tag_name}`;
+        }
+    } catch (error) {
+        console.error('Error fetching version:', error);
+        // Keep the default version text if fetch fails
+    }
+}
+
+// Call the function when the page loads
+document.addEventListener('DOMContentLoaded', updateVersionDisplay);
