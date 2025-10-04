@@ -1,137 +1,96 @@
----
-layout: default
-title: "Home"
-description: "Modernizing Bible Engagement among the Youth through Gamification"
-show_floating_elements: true
-custom_js: ["download.js"]
----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>City of Faith - Under Maintenance</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-<div class="container">
-    <div class="header">
-        <h1 class="title">City of Faith</h1>
-        <p class="subtitle">Modernizing Bible Engagement among the Youth through Gamification</p>
-    </div>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
 
-    <div class="download-section" id="download">
-        <h2 class="download-title">
-            <div class="icon">📱</div>
-            Download Now
-        </h2>
-        <p class="download-description">
-            Start your spiritual journey today! Download City of Faith and begin building your biblical city while deepening your faith.
-        </p>
+        .maintenance-container {
+            background: white;
+            border-radius: 20px;
+            padding: 60px 40px;
+            text-align: center;
+            max-width: 500px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        .icon {
+            font-size: 80px;
+            margin-bottom: 20px;
+            animation: rotate 4s ease-in-out infinite;
+        }
+
+        @keyframes rotate {
+            0%, 100% { transform: rotate(-5deg); }
+            50% { transform: rotate(5deg); }
+        }
+
+        h1 {
+            font-size: 32px;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .subtitle {
+            font-size: 18px;
+            color: #667eea;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 16px;
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        .info-box {
+            background: #f8f9ff;
+            border-left: 4px solid #667eea;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 30px;
+        }
+
+        .info-box p {
+            margin: 0;
+            font-size: 14px;
+            color: #555;
+        }
+
+        .highlight {
+            color: #667eea;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <div class="maintenance-container">
+        <div class="icon">🔧</div>
+        <h1>Under Maintenance</h1>
+        <p class="subtitle">City of Faith</p>
+        <p>We're currently performing scheduled maintenance to improve your experience. We'll be back online shortly!</p>
         
-        <a href="https://github.com/{{ site.github_username }}/{{ site.github_repo }}/releases/latest/download/your-app.apk" 
-           class="download-btn" 
-           id="downloadBtn"
-           download>
-           📲 Download for Android
-        </a>
-        
-        <div class="download-info">
-            <div class="download-detail">
-                <div class="download-detail-icon">📋</div>
-                <span>Version 0.1.0 (beta testing)</span>
-            </div>
-        </div>
-
-        <!-- Status message area -->
-        <p id="status" class="text-center text-gray-400 mt-4 h-5"></p>
-    </div>
-
-    <div class="main-content">
-        <div class="section">
-            <h2 class="section-title">
-                <div class="icon">🎮</div>
-                The Challenge
-            </h2>
-            <p>In today's digital age, youth are more engaged with mobile games than with traditional religious practices. Conventional methods like sermons or Bible studies often fail to capture their interest, creating a significant gap in spiritual growth and Bible engagement among young believers.</p>
-        </div>
-
-        <div class="section">
-            <h2 class="section-title">
-                <div class="icon">💡</div>
-                Our Solution
-            </h2>
-            <p>City of Faith bridges this gap by using <span class="highlight">gamification to encourage daily Bible reading and reflection</span>. By integrating biblical content into an engaging city-building experience with interactive features, we transform spiritual practices into captivating digital experiences.</p>
-        </div>
-
-        <div class="features-grid">
-            <h2 class="features-title">Game Features</h2>
-            <div class="features">
-                <div class="feature">
-                    <div class="feature-icon">🏙️</div>
-                    <h3>City Building</h3>
-                    <p>Build and expand your own biblical city while learning about faith and community through engaging gameplay mechanics.</p>
-                </div>
-                <div class="feature">
-                    <div class="feature-icon">🌾</div>
-                    <h3>Faith-Based Farming</h3>
-                    <p>Cultivate crops and tend to your land while reflecting on biblical principles of stewardship and growth.</p>
-                </div>
-                <div class="feature">
-                    <div class="feature-icon">👥</div>
-                    <h3>Biblical NPCs</h3>
-                    <p>Interact with characters from the Bible through engaging quizzes and conversations that bring scripture to life.</p>
-                </div>
-                <div class="feature">
-                    <div class="feature-icon">📚</div>
-                    <h3>Bible Quizzes</h3>
-                    <p>Test your knowledge and deepen your understanding with interactive quizzes based on biblical stories and teachings.</p>
-                </div>
-                <div class="feature">
-                    <div class="feature-icon">🎯</div>
-                    <h3>Parable Minigames</h3>
-                    <p>Experience Jesus's parables through interactive minigames that make timeless lessons memorable and fun.</p>
-                </div>
-                <div class="feature">
-                    <div class="feature-icon">📖</div>
-                    <h3>Daily Devotionals</h3>
-                    <p>Engage with daily reflections and devotional content seamlessly integrated into your gaming experience.</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="section">
-            <h2 class="section-title">
-                <div class="icon">🧠</div>
-                Theoretical Foundation
-            </h2>
-            <p>Grounded in <strong>Digital Spirituality</strong>, <strong>Self-Determination Theory</strong>, and <strong>Moral Foundations Theory</strong>, City of Faith motivates users through autonomy, reward systems, and ethical storytelling. The game aims to reconnect youth with their faith by aligning spiritual growth with the digital habits they already enjoy.</p>
-        </div>
-
-        <div class="section">
-            <h2 class="section-title">
-                <div class="icon">🎯</div>
-                Our Mission
-            </h2>
-            <p>To transform how young people engage with their faith by creating an innovative platform that makes Bible study interactive, enjoyable, and relevant to their digital lifestyle. We believe that <span class="highlight">faith and technology can work together</span> to create meaningful spiritual experiences.</p>
-        </div>
-
-        <div class="privacy-section">
-            <h2 class="section-title">
-                <div class="icon">🔒</div>
-                Your Privacy Matters
-            </h2>
-            <p style="margin-bottom: 25px;">We are committed to protecting your personal information and creating a safe gaming environment for all players.</p>
-            <a href="{{ '/privacy-policy' | relative_url }}" class="privacy-link">View Privacy Policy</a>
+        <div class="info-box">
+            <p>Thank you for your patience. Check back soon to continue your spiritual journey!</p>
         </div>
     </div>
-</div>
-
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    // Handle #download hash when landing on home page
-    if (window.location.hash === '#download') {
-        setTimeout(() => {
-            const downloadSection = document.querySelector('#download');
-            if (downloadSection) {
-                downloadSection.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
-            }
-        }, 300); // Delay to ensure page elements are loaded
-    }
-});
-</script>
+</body>
+</html>
